@@ -7,11 +7,11 @@ WORKDIR /app
 # Step 3: Copy the current directory contents into the container at /app
 COPY . /app
 
-# Step 4: Install required Python packages
+# Step 4: Install the dependencies from requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Step 5: Expose the port the app will run on
+# Step 5: Expose the port that the Flask app will run on
 EXPOSE 6002
 
-# Step 6: Run the application when the container starts
-CMD ["python", "app.py"]
+# Step 6: Run the Flask application when the container starts
+CMD ["python", "model.py"]
